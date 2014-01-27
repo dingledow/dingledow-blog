@@ -404,34 +404,14 @@ table.plain {
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
-.post {
+article.post {
 	position: relative;
-	width:80%;
-	max-width: 700px;
+	width:100%;
 	margin: 4rem auto;
 	padding-bottom: 4rem;
 	border-bottom: #EBF2F6 1px solid;
 	word-break: break-word;
 	hyphens: auto;
-}
-
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.post:after {
-	display: block;
-	content: "";
-	width: 7px;
-	height: 7px;
-	border: #E7EEF2 1px solid;
-	position: absolute;
-	bottom: -5px;
-	left: 50%;
-	margin-left: -5px;
-	background: #fff;
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
-	box-shadow: #fff 0 0 0 5px;
 }
 
 .post-title {
@@ -446,23 +426,6 @@ table.plain {
 	margin: 1.6rem 0 0 0;
 	font-size: 0.9em;
 	line-height: 1.6em;
-}
-
-.post-meta {
-	display: inline-block;
-	margin: 0 0 5px 0;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.5rem;
-	color: #9EABB3;
-}
-
-.post-meta a {
-	color: #9EABB3;
-	text-decoration: none;
-}
-
-.post-meta a:hover {
-	text-decoration: underline;
 }
 
 .user-meta {
@@ -524,64 +487,78 @@ table.plain {
 	display: none;
 }
 
-/* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-	padding: 60px 0;
+.post-template .post-content p,
+.post-template .post-content h2,
+.post-template .post-content h3,
+.post-template .post-content pre,
+.post-template .post-content ul,
+.post-template .post-content ol,
+span.post-date{
+	width: 100%;
+	max-width: 540px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-/* Keep large images within the bounds of the post-width */
-.post-content img {
+span.post-date{
 	display: block;
-	max-width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #b2b2b1;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.post-template .post-content p{
+	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.post-template .post-content ul,
+.post-template .post-content ol{
+	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.post-template .post-title{
+	width: 100%;
+	max-width: 460px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/* Full width image */
+
+.post-content div.full-width-image{
+	margin: 100px auto;
+}
+.post-content div.full-width-image img {
+	display: block;
+	width: 100%;
 	margin: 0 auto;
 }
 
-/* The author credit area after the post */
-.post-footer {
-	position: relative;
-	margin: 4rem 0 0 0;
-	padding: 4rem 0 0 0;
-	border-top: #EBF2F6 1px solid;
-}
+/* Normal image */
 
-.post-footer h4 {
-	font-size: 1.8rem;
-	margin: 0;
+.post-content div.normal-image{
+	margin: 0 auto;
+	max-width: 940px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-
-.post-footer p {
-	margin: 1rem 0;
-	font-size: 1.4rem;
-	line-height: 1.6em;
+.post-content div.normal-image img {
+	display: block;
+	width: 100%;
 }
-
-/* Create some space to the right for the share links */
-.post-footer .author {
-	margin-right: 180px;
-}
-
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
-.post-footer .share {
-	position: absolute;
-	top: 4rem;
-	right: 0;
-	width: 140px;
-}
-
-.post-footer .share a {
-	font-size: 1.8rem;
-	display: inline-block;
-	margin: 1.4rem 1.6rem 1.6rem 0;
-	color: #BBC7CC;
-}
-
-.post-footer .share a:hover {
-	color: #50585D;
-}
-
 
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
@@ -807,10 +784,6 @@ table.plain {
 		padding-bottom: 1rem;
 	}
 
-	.post-template .post-header {
-		padding: 40px 0;
-	}
-
 	h1 {
 		font-size: 4.8rem;
 		text-indent: -2px;
@@ -887,11 +860,7 @@ table.plain {
 		padding-bottom: 0;
 	}
 
-	.post-template .post-header {
-		padding: 30px 0;
-	}
-
-	.post-meta {
+	.post-date {
 		font-size: 1.3rem;
 	}
 
