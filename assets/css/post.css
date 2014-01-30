@@ -87,7 +87,6 @@ html {
 body {
 	height: 100%;
 	max-height: 100%;
-	font-family: 'Droid Serif', serif;
 	font-size: 2.0rem;
 	line-height: 1.6em;
 	color: #3A4145;
@@ -110,46 +109,27 @@ h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 	line-height: 1;
 	margin-top: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: AvenirLTStd-Black, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 2em;
 	line-height: 1.2em;
-	letter-spacing: -2px;
-	text-indent: -3px;
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: 1.5em;
 	line-height: 1.2em;
-	letter-spacing: -1px;
-	text-indent: -2px;
 }
 
 h3 {
-	font-size: 3.5rem;
+	font-size: 1.2em;
 }
 
 h4 {
-	font-size: 3rem;
-}
-
-h5 {
-	font-size: 2.5rem;
-}
-
-h6 {
-	font-size: 2rem;
-}
-
-a {
-	color: #4a4a4a;
-	transition: color ease 0.3s;
-}
-
-a:hover {
-	color: #57A3E8;
+	font-size: 1em;
 }
 
 h1 a, h2 a, h3 a,
@@ -238,20 +218,22 @@ code, tt {
 	border: 1px solid #E3EDF3;
 	background: #F7FAFB;
 	border-radius: 2px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 pre {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 1.6em 0;
-	border: 1px solid #E3EDF3;
+	border: 1px solid #e3e3e3;
 	width: 100%;
 	padding: 10px;
 	font-family: Inconsolata, monospace, sans-serif;
 	font-size: 0.9em;
 	white-space: pre;
 	overflow: auto;
-	background: #F7FAFB;
+	background: #fafafa;
 	border-radius: 3px;
 }
 
@@ -353,133 +335,86 @@ table.plain {
 
 
 /* ==========================================================================
-   4. General - The main styles for the the theme
-   ========================================================================== */
-
-/* Big cover image on the home page */
-#site-head {
-	position: relative;
-	display: table;
-	width: 100%;
-	height: 60%;
-	margin-bottom: 5rem;
-	text-align: center;
-	color: #fff;
-	background: #303538 no-repeat center center;
-	background-size: cover;
-}
-
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-#blog-logo img {
-	display: block;
-	max-height: 100px;
-	width: auto;
-	margin: 0 auto;
-	line-height: 0;
-}
-
-#back {
-	color: rgba(0,0,0,0.2);
-	position: fixed;
-	top: 8px;
-	left: 8px;
-	padding: 6px;
-	font-size: 16px;
-}
-
-/* The details of your blog. Defined in ghost/settings/ */
-.blog-title {
-	margin: 10px 0 10px 0;
-	font-size: 5rem;
-	letter-spacing: -1px;
-}
-
-.blog-description {
-	margin: 0;
-	font-size: 1.8rem;
-	line-height: 1.5em;
-	font-weight: 300;
-	font-family: 'Droid Serif', serif;
-	letter-spacing: 0;
-}
-
-/* Every post, on every page, gets this style on its <article> tag */
-article.post {
-	position: relative;
-	width:100%;
-	margin: 4rem auto;
-	padding-bottom: 4rem;
-	border-bottom: #EBF2F6 1px solid;
-	word-break: break-word;
-	hyphens: auto;
-}
-
-.post-title {
-	margin:0;
-}
-
-.post-title a {
-	text-decoration: none;
-}
-
-.post-excerpt p {
-	margin: 1.6rem 0 0 0;
-	font-size: 0.9em;
-	line-height: 1.6em;
-}
-
-.user-meta {
-	position: relative;
-	padding: 0.3rem 40px 0 100px;
-	min-height: 77px;
-}
-
-.user-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.user-name {
-	display: block;
-	font-weight: bold;
-}
-
-.user-bio {
-	display: block;
-	max-width: 440px;
-	font-size: 1.4rem;
-	line-height: 1.5em;
-}
-
-.publish-meta {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 4.3rem 0 4rem 0;
-	text-align: right;
-}
-
-.publish-heading {
-	display: block;
-	font-weight: bold;
-}
-
-.publish-date {
-	display: block;
-	font-size: 1.4rem;
-	line-height: 1.5em;
-}
-
-/* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
 
+div.nav{
+	position: fixed;
+	left: 50%;
+	margin-left: -152.5px;
+	top: 0;
+}
+
+div.nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 1.2em 0 0 0;
+	text-align: center;
+}
+
+div.nav ul li{
+	display: inline;
+	margin: 10px;
+}
+
+div.nav ul li a{
+	text-decoration: none;
+	color: #c6c6c5;
+	font-family: AvenirLTStd-Black, Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+div.nav ul li a:hover{
+	color: #878786;
+	transition: color 0.3s ease;
+}
+
+div.logo{
+	position: fixed;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: 78px;
+	z-index: 1;
+}
+
+div.logo img{
+	width: 50px;
+	height: 50px;
+}
+
+/* Post header image */
+div.post_header{
+	height: 200px;
+	width: 100%;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-color: black;
+	z-index: -10;
+	position: absolute;
+	top: 0;
+}
+
+.post-title{
+	margin-bottom: 0.2em;
+}
+
 /* Tweak the .post wrapper style */
-.post-template .post {
+.post-template{
 	margin-top: 0;
 	border-bottom: none;
 	padding-bottom: 0;
+	background-color: white;
+	z-index: 1;
+}
+
+article.post{
+	margin-top: 200px;
+	border-bottom: none;
+	background-color: white;
+	z-index: 1;
+	padding-top: 4em;
+	z-index: 10;
 }
 
 /* Kill that stylish little circle that was on the border, too */
@@ -507,10 +442,16 @@ span.post-date{
 	text-align: center;
 	text-transform: uppercase;
 	color: #b2b2b1;
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 13px;
 	letter-spacing: 1px;
+	margin-bottom: 4em;
+}
+
+.post-template .post-content{
+	margin-top: 4em;
+	margin-bottom: 4em;
 }
 
 .post-template .post-content p{
@@ -550,7 +491,7 @@ span.post-date{
 /* Normal image */
 
 .post-content div.normal-image{
-	margin: 0 auto;
+	margin: 100px auto;
 	max-width: 940px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -558,6 +499,17 @@ span.post-date{
 .post-content div.normal-image img {
 	display: block;
 	width: 100%;
+}
+
+.post-footer{
+	padding: 10px 10px 10px 20px;
+	border-top: 1px solid #eaeaea;
+}
+
+.post-footer p{
+	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
 }
 
 /* ==========================================================================
@@ -862,26 +814,6 @@ span.post-date{
 
 	.post-date {
 		font-size: 1.3rem;
-	}
-
-	.post-footer {
-		padding: 4rem 0;
-		text-align: center;
-	}
-
-	.post-footer .author {
-		margin: 0 0 2rem 0;
-		padding: 0 0 1.6rem 0;
-		border-bottom: #EBF2F6 1px dashed;
-	}
-
-	.post-footer .share {
-		position: static;
-		width: auto;
-	}
-
-	.post-footer .share a {
-		margin: 1.4rem 0.8rem 0 0.8rem;
 	}
 
 	.older-posts,
