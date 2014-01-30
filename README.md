@@ -8,6 +8,4 @@ This theme is a modified version of 'Casper', Ghost's default theme.  The Casper
 
 Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
 
-Please read the [Copyright and License for the Casper theme](https://github.com/TryGhost/Casper).
-
 Feel free to use this theme if it is useful for your projects.  It would be great to hear how you use it, so please let me know if it's been helpful by [tweeting me!](https://twitter.com/dingledow)
