@@ -456,13 +456,15 @@ span.post-meta{
 
 article.post .post-excerpt{
 	margin-top: 4em;
-	margin-bottom: 4em;
+	padding-bottom: 4em;
+	border-bottom: 1px solid #eaeaea;
 }
 
 article.post .post-excerpt p{
 	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 28px;
+	margin-bottom: 0;
 }
 
 article.post .post-excerpt ul,

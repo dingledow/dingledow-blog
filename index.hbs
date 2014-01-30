@@ -5,8 +5,7 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The main content area on the homepage }}
-
+{{! The big featured header on the homepage, with the site logo and description }}
 <div class="nav">
     <ul>
         <li><a href="#">HOME</a></li>
@@ -22,15 +21,19 @@
     </div>
 </div>
 
+{{! The main content area on the homepage }}
 <main class="content" role="main">
 
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
     <article class="{{post_class}}">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {#if tags}}on {{tags}}{{/if}}</span>
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+            
 
+        </header>
         <section class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
         </section>
