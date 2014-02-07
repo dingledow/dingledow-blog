@@ -13,6 +13,8 @@
         $('img.post_header').css("display", "none");
         $('div.post_header').css("backgroundPosition", position);
 
+        $('.post-content a').css("color", color);
+
     });
 
 }(jQuery));
