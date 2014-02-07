@@ -442,6 +442,16 @@ span.post-date{
 	margin-right: auto;
 }
 
+.post-template .post-content p a{
+	color: #3F3F3F;
+	text-decoration: none;
+}
+
+.post-template .post-content p a:hover{
+	text-decoration: underline;
+	color: #282828;
+}
+
 span.post-meta{
 	display: block;
 	text-align: center;
