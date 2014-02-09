@@ -52,6 +52,8 @@
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 /* Each icon is created by inserting the corret character into the 
@@ -551,6 +553,13 @@ article.post .post-title a{
 	font-size: 14px;
 	margin: 0;
 	color: #a8a8a8;
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 30px);
+}
+
+.post-footer a.icon-twitter{
+	color: #55acee;
 }
 
 /* ==========================================================================
