@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/assets/js/index.js"></script>
 <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
 
 {{!< default}}
@@ -8,10 +9,10 @@
 {{! The big featured header on the homepage, with the site logo and description }}
 <div class="nav">
     <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="http://ingledow.co.uk/">HOME</a></li>
+        <li><a href="/">BLOG</a></li>
+        <li><a href="http://dingledow.typify.io/">ABOUT</a></li>
+        <li><a href="http://ingledow.co.uk/contact/">CONTACT</a></li>
     </ul>
 </div>
 
@@ -30,12 +31,12 @@
     <article class="{{post_class}}">
         <header class="post-header">
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+            <span class="post-meta"><time datetime="{{date format='DD-MMMM-YYYY'}}">{{date format="DD MMMM YYYY"}}</time></span>
             
 
         </header>
         <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
+            {{content words="30"}}
         </section>
     </article>
 
@@ -49,9 +50,7 @@
 <footer class="post-footer">
 
     <p>David Ingledow &copy; 2014</p>
-    <a class="icon-twitter hidden" href="https://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
-        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-        <span class="hidden">Twitter</span>
+    <a class="icon-twitter" href="https://twitter.com/dingledow">
     </a>
     <a href="https://plus.google.com/108117619306984245111?rel=author"></a>
 

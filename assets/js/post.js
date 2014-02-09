@@ -2,7 +2,7 @@
 (function ($) {
     "use strict";
 
-    $(document).ready(function(){
+    $(document).ready(function() {
 
         var src = $('img.post_header').attr('src');
         var position = $('img.post_header').data('position');
@@ -14,6 +14,8 @@
         $('div.post_header').css("backgroundPosition", position);
 
         $('.post-content a').css("color", color);
+
+        $('.post-content p:first-child').css("display", "none");
 
     });
 

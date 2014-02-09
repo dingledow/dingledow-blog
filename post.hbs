@@ -10,10 +10,10 @@
 
 	<div class="nav">
 		<ul>
-			<li><a href="#">HOME</a></li>
-			<li><a href="#">BLOG</a></li>
-			<li><a href="#">ABOUT</a></li>
-			<li><a href="#">CONTACT</a></li>
+			<li><a href="http://ingledow.co.uk/">HOME</a></li>
+        	<li><a href="/">BLOG</a></li>
+        	<li><a href="http://dingledow.typify.io/">ABOUT</a></li>
+        	<li><a href="http://ingledow.co.uk/contact/">CONTACT</a></li>
 		</ul>
 	</div>
 
@@ -31,18 +31,21 @@
 		<h1 class="post-title">{{{title}}}</h1>
 
 		{{! Everything below outputs content of the the post which has been published }}
-		<span class="post-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMMM YYYY'}}</time></span>
+		<span class="post-date"><time datetime="{{date format="DD-MMMM-YYYY"}}">{{date format='DD MMMM YYYY'}}</time></span>
 
 		<section class="post-content">
 			{{content}}
 		</section>
 
+		<section class="author">
+			<p>by {{author.name}}</p>
+			<img src="{{author.image}}">
+		</section>
+
 		<footer class="post-footer">
 
 			<p>David Ingledow &copy; 2014</p>
-			<a class="icon-twitter hidden" href="https://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
-				onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-				<span class="hidden">Twitter</span>
+			<a class="icon-twitter" href="https://twitter.com/dingledow">
 			</a>
 			<a href="https://plus.google.com/108117619306984245111?rel=author"></a>
 
