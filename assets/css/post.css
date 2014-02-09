@@ -237,6 +237,13 @@ pre {
 	border-radius: 3px;
 }
 
+@media only screen and (max-width: 580px) {
+	pre{
+		width: calc(100% - 40px);
+		font-size: 0.8em;
+	}
+}
+
 pre code, tt {
 	font-size: inherit;
 	white-space: -moz-pre-wrap;
@@ -397,7 +404,7 @@ div.post_header{
 	top: 0;
 }
 
-.post-title{
+h1.post-title{
 	margin-bottom: 0.2em;
 }
 
@@ -419,6 +426,12 @@ article.post{
 	z-index: 10;
 }
 
+@media only screen and (max-width: 580px) {
+	article.post{
+		font-size: 0.8em;
+	}
+}
+
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
 	display: none;
@@ -431,7 +444,6 @@ article.post{
 .post-template .post-content ul,
 .post-template .post-content ol,
 span.post-date{
-	width: 100%;
 	max-width: 540px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -468,20 +480,19 @@ span.post-date{
 
 .post-template .post-content p{
 	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 0.9em;
+	line-height: 1.8em;
 }
 
 .post-template .post-content ul,
 .post-template .post-content ol{
 	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 0.9em;
+	line-height: 1.8em;
 }
 
 .post-template .post-title{
-	width: 100%;
-	max-width: 460px;
+	max-width: 540px;
 	padding-left: 20px;
 	padding-right: 20px;
 	margin-left: auto;
@@ -492,8 +503,15 @@ span.post-date{
 /* Full width image */
 
 .post-content div.full-width-image{
-	margin: 100px auto;
+	margin: 3em auto;
 }
+
+@media only screen and (max-width: 580px) {
+	.post-content div.full-width-image{
+		margin: 1.6em auto;
+	}
+}
+
 .post-content div.full-width-image img {
 	display: block;
 	width: 100%;
@@ -503,14 +521,44 @@ span.post-date{
 /* Normal image */
 
 .post-content div.normal-image{
-	margin: 100px auto;
+	margin: 3em auto;
 	max-width: 940px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
+@media only screen and (max-width: 580px) {
+	.post-content div.normal-image{
+		margin: 1.6em auto;
+	}
+}
+
 .post-content div.normal-image img {
 	display: block;
 	width: 100%;
+}
+
+section.author{
+	margin-bottom: 3em;
+}
+
+section.author p{
+	text-align: center;
+	text-transform: uppercase;
+	color: #b2b2b1;
+	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+section.author img{
+	width: 80px;
+	height: auto;
+	border-radius: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .post-footer{
@@ -522,6 +570,7 @@ span.post-date{
 	font-family: Whitney HTF, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	margin: 0;
+	color: #a8a8a8;
 }
 
 /* ==========================================================================
@@ -708,144 +757,3 @@ span.post-date{
 	opacity: 1;
 	top: -33px;
 }
-
-
-/* ==========================================================================
-   9. Media Queries - Smaller than 900px
-   ========================================================================== */
-
-@media only screen and (max-width: 900px) {
-
-	blockquote {
-		margin-left: 0;
-	}
-
-	#site-head {
-		-webkit-box-sizing: border-box; 
-		-moz-box-sizing: border-box;
-		box-sizing: border-box; 
-		height: auto;
-		min-height: 240px;
-		padding: 15% 0;
-	}
-
-	.blog-title {
-		font-size: 4rem;
-		letter-spacing: -1px;
-	}
-
-	.blog-description {
-		font-size: 1.7rem;
-		line-height: 1.5em;
-	}
-
-	.post {
-		font-size: 0.9em;
-		line-height: 1.6em;
-	}
-
-	.post-template .post {
-		padding-bottom: 1rem;
-	}
-
-	h1 {
-		font-size: 4.8rem;
-		text-indent: -2px;
-	}
-
-	h2 {
-		font-size: 3.8rem;
-	}
-
-	h3 {
-		font-size: 3.3rem;
-	}
-
-	h4 {
-		font-size: 2.8rem;
-	}
-
-}
-
-/* ==========================================================================
-   10. Media Queries - Smaller than 500px
-   ========================================================================== */
-
-
-@media only screen and (max-width: 500px) {
-
-	#blog-logo img {
-		max-height: 80px;
-	}
-
-	.inner, 
-	.pagination {
-		width: auto;
-		margin-left: 16px;
-		margin-right: 16px;
-	}
-
-	.post {
-		width:auto;
-		margin-left: 16px;
-		margin-right: 16px;
-		font-size: 0.8em;
-		line-height: 1.6em;
-	}
-
-	#site-head {
-		padding: 10% 0;
-	}
-
-	.blog-title {
-		font-size: 3rem;
-	}
-
-	.blog-description {
-		font-size: 1.5rem;
-	}
-
-
-	h1, h2 {
-		font-size: 3rem;
-		line-height: 1.1em;
-		letter-spacing: -1px;
-	}
-
-	h3 {
-		font-size: 2.8rem;
-	}
-
-	h4 {
-		font-size: 2.3rem;
-	}
-
-	.post-template .post {
-		padding-bottom: 0;
-	}
-
-	.post-date {
-		font-size: 1.3rem;
-	}
-
-	.older-posts,
-	.newer-posts {
-		position: static;
-		margin: 10px 0;
-	}
-
-	.page-number {
-		display: block;
-	}
-
-	.site-footer {
-		margin-top: 6rem;
-		font-size: 1.1rem;
-	}
-
-}
-
-/* ==========================================================================
-   End of file. Media queries should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
-   ========================================================================== */
