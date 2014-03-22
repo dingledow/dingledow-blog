@@ -33,30 +33,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="/assets/js/jquery.scrolldepth.js"></script>
 	<script>
-    var _gaq = {};
-    _gaq.push = function(data) {
-      console.log("_gaq.push(" + JSON.stringify(data) + ");");
-    };
-
-    var dataLayer = {};
-    dataLayer.push = function(data) {
-      console.log("dataLayer.push(" + JSON.stringify(data) + ");");
-    };
-
-    var ga = function(params) {
-      var args = Array.prototype.slice.call(arguments, 1);
-      console.log("ga(" + args.join(',') + ");");
-    };
-
-    _gaq = undefined;
-    dataLayer = undefined;
-    //ga = undefined;
-
-    $.scrollDepth({
-      elements: ['#main', 'footer'],
-      userTiming: false
-    });
-  </script>
+		$.scrollDepth({
+		});
+    </script>
 
 		{{! Ghost outputs important style and meta data with this tag }}
 		{{ghost_head}}
