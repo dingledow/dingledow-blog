@@ -30,10 +30,17 @@
 	  ga('send', 'pageview');
 	</script>
 
-	{{! Ghost outputs important style and meta data with this tag }}
-	{{ghost_head}}
-</head>
-<body class="{{body_class}}">
+	<script src="/assets/js/jquery.scrolldepth.min.js"></script>
+	<script>
+	$(function() {
+		$.scrollDepth();
+	});
+	</script>
+
+		{{! Ghost outputs important style and meta data with this tag }}
+		{{ghost_head}}
+	</head>
+	<body class="{{body_class}}">
 
 	{{! Everything else gets inserted here }}
 	{{{body}}}
